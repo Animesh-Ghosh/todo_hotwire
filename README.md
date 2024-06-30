@@ -1,24 +1,22 @@
-# README
+# todo_hotwire
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Single-Page Todo App with Ruby on Rails and Hotwire, built to practice Hotwire.
 
-Things you may want to cover:
+I am running Ruby 3.2.2, rest can be installed via bundler.
 
-* Ruby version
+## Installation
 
-* System dependencies
+1. Clone the repository
+2. Run `bin/setup`
+3. Run the server
 
-* Configuration
+```bash
+bin/setup
+bin/rails s
+```
 
-* Database creation
+## Running Tests
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```bash
+bundle exec rspec
+```
