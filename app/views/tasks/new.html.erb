@@ -1,6 +1,8 @@
 <h1>New task</h1>
 
+<%= turbo_frame_tag @task do %>
 <%= render "form", task: @task %>
+<% end %>
 
 <br>
 
