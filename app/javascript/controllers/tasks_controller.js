@@ -6,7 +6,10 @@ export default class extends Controller {
 
   clearTextFields(event) {
     if (!event.detail.success) return
+    this.#clearTextFields()
+  }
 
+  #clearTextFields() {
     this.textFieldTargets.forEach((textField) => {
       textField.value = ""
     })
