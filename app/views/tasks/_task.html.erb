@@ -1,22 +1,25 @@
-<%= turbo_frame_tag task do %>
-  <p>
-    <strong>Title:</strong>
-    <%= task.title %>
-  </p>
+<%= turbo_frame_tag task, style: 'display: flex;', data: { sortable_url: task_path(task) } do %>
+  <span class="sort-handle">::</span>
+  <div>
+    <p>
+      <strong>Title:</strong>
+      <%= task.title %>
+    </p>
 
-  <p>
-    <strong>Description:</strong>
-    <%= task.description %>
-  </p>
+    <p>
+      <strong>Description:</strong>
+      <%= task.description %>
+    </p>
 
-  <p>
-    <strong>Completed:</strong>
-    <%= task.completed %>
-  </p>
+    <p>
+      <strong>Completed:</strong>
+      <%= task.completed %>
+    </p>
 
-  <p>
-    <%= link_to "Edit", edit_task_path(task) %>
-    <%= link_to 'Delete', task, data: { turbo_method: :delete } %>
-  </p>
+    <p>
+      <%= link_to "Edit", edit_task_path(task) %>
+      <%= link_to 'Delete', task, data: { turbo_method: :delete } %>
+    </p>
+  </div>
 </div>
 <% end %>

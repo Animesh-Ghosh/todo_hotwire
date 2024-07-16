@@ -1,0 +1,6 @@
+<%= turbo_stream.remove task %>
+<% if task.first? %>
+  <%= turbo_stream.prepend :tasks, partial: 'tasks/task', locals: { task: task } %>
+<% else %>
+  <%= turbo_stream.after task.higher_item, partial: 'tasks/task', locals: { task: task } %>
+<% end %>

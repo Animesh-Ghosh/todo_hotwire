@@ -8,6 +8,6 @@
 <% end %>
 
 <%= turbo_stream_from :tasks %>
-<%= turbo_frame_tag :tasks do %>
+<%= turbo_frame_tag :tasks, data: { controller: :sortable, sortable_handle_class: '.sort-handle' } do %>
   <%= render @tasks %>
 <% end %>
