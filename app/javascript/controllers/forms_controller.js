@@ -1,15 +1,16 @@
 import { Controller } from "@hotwired/stimulus"
 
-// Connects to data-controller="tasks"
+// Connects to data-controller="forms"
 export default class extends Controller {
   static targets = ["textField"]
 
-  clearTextFields(event) {
+  resetFields(event) {
     if (!event.detail.success) return
-    this.#clearTextFields()
+    this.#resetTextFields()
+    // reset other types of fields...
   }
 
-  #clearTextFields() {
+  #resetTextFields() {
     this.textFieldTargets.forEach((textField) => {
       textField.value = ""
     })
